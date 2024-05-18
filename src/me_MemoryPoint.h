@@ -1,10 +1,10 @@
-// Memory point description. Bit granularity is possible.
+// Memory address description. Bit granularity is possible.
 
-// That's for (<= 64KB) memory system.
+// Maximum address 64 KiB. This structure is not for larger systems.
 
 /*
   Author: Martin Eden
-  Last mod.: 2024-05-17
+  Last mod.: 2024-05-18
 */
 
 #pragma once

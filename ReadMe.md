@@ -23,9 +23,9 @@ Run [Remove.sh](Remove.sh).
 
 ## Details
 
-[Example](examples/me_MemoryPoint/me_MemoryPoint.ino)
-
 [Interface](src/me_MemoryPoint.h)
+
+[Example](examples/me_MemoryPoint/me_MemoryPoint.ino)
 
 
 ## See also

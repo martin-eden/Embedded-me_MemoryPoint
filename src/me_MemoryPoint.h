@@ -15,7 +15,7 @@ namespace me_MemoryPoint
 {
   using namespace me_BaseTypes;
 
-  typedef TUint_2 TMemoryPoint;
+  typedef TUint_1 * TMemoryPoint;
 
   struct TMemoryPoint_Bits
   {
@@ -25,5 +25,6 @@ namespace me_MemoryPoint
 }
 
 /*
-  2024-05-17
+  2024-05-17 TMemoryPoint is TUint_2
+  2024-05-19 TMemoryPoint is TUint_1*. Example is ugly but I need indexing.
 */

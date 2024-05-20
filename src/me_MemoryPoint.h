@@ -1,10 +1,8 @@
 // Memory address description. Bit granularity is possible.
 
-// Maximum address 64 KiB. This structure is not for larger systems.
-
 /*
   Author: Martin Eden
-  Last mod.: 2024-05-18
+  Last mod.: 2024-05-20
 */
 
 #pragma once
@@ -15,8 +13,26 @@ namespace me_MemoryPoint
 {
   using namespace me_BaseTypes;
 
-  typedef TUint_1 * TMemoryPoint;
+  /*
+    Position in memory. Byte granularity.
 
+    Defined as union.
+
+      Addr - address
+      Bytes - byte array casted on that location
+  */
+  typedef union
+  {
+    TUint_2 Addr;
+    TUint_1 * Bytes;
+  } TMemoryPoint;
+
+  /*
+    Position in memory. Bit granularity.
+
+      Base - memory position with byte granularity
+      BitOffs - bit offset from that position
+  */
   struct TMemoryPoint_Bits
   {
     TMemoryPoint Base;
@@ -27,4 +43,5 @@ namespace me_MemoryPoint
 /*
   2024-05-17 TMemoryPoint is TUint_2
   2024-05-19 TMemoryPoint is TUint_1*. Example is ugly but I need indexing.
+  2024-05-20 TMemoryPoint is union! Best (or worst) of the both worlds.
 */

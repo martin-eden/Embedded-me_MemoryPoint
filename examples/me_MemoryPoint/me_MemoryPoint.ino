@@ -91,6 +91,7 @@ void TestBitAddress()
   printf("Pin value: %u\n", Value);
 
   delay(500);
+
   digitalWrite(CorrespondingPin, LOW);
   Value = (Pin_13_Value.Base.Bytes[0] >> Pin_13_Value.BitOffs) & 1;
   printf("Pin value: %u\n", Value);

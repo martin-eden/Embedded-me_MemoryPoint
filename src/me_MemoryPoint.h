@@ -2,7 +2,7 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2024-05-20
+  Last mod.: 2024-05-29
 */
 
 #pragma once
@@ -11,21 +11,21 @@
 
 namespace me_MemoryPoint
 {
-  using namespace me_BaseTypes;
+  using
+    me_BaseTypes::TUint_2,
+    me_BaseTypes::TUint_1;
 
   /*
     Position in memory. Byte granularity.
 
-    Defined as union.
-
-      Addr - address
-      Bytes - byte array casted on that location
+    Addr - address
   */
-  typedef union
+  struct TMemoryPoint
   {
     TUint_2 Addr;
-    TUint_1 * Bytes;
-  } TMemoryPoint;
+
+    void DebugPrint();
+  };
 
   /*
     Position in memory. Bit granularity.
@@ -37,6 +37,8 @@ namespace me_MemoryPoint
   {
     TMemoryPoint Base;
     TUint_1 BitOffs;
+
+    void DebugPrint();
   };
 }
 
@@ -44,4 +46,8 @@ namespace me_MemoryPoint
   2024-05-17 TMemoryPoint is TUint_2
   2024-05-19 TMemoryPoint is TUint_1*. Example is ugly but I need indexing.
   2024-05-20 TMemoryPoint is union! Best (or worst) of the both worlds.
+  2024-05-29
+    [/] TMemoryPoint is .Addr: TUint_2. Bytes pointer cast is moving
+    to TMemorySegment.
+    [+] DebugPrint()
 */

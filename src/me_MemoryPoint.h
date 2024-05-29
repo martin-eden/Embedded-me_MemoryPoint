@@ -24,7 +24,7 @@ namespace me_MemoryPoint
   {
     TUint_2 Addr;
 
-    void DebugPrint();
+    void PrintWrappings();
   };
 
   /*
@@ -38,7 +38,7 @@ namespace me_MemoryPoint
     TMemoryPoint Base;
     TUint_1 BitOffs;
 
-    void DebugPrint();
+    void PrintWrappings();
   };
 }
 
@@ -49,5 +49,5 @@ namespace me_MemoryPoint
   2024-05-29
     [/] TMemoryPoint is .Addr: TUint_2. Bytes pointer cast is moving
     to TMemorySegment.
-    [+] DebugPrint()
+    [+] PrintWrappings()
 */

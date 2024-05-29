@@ -42,7 +42,7 @@ void Test()
   TMemoryPoint Timer_0_Counter = { .Addr = 0x46 };
 
   printf("Timer_0_Counter ");
-  Timer_0_Counter.DebugPrint();
+  Timer_0_Counter.PrintWrappings();
   printf("\n");
 
   // --
@@ -56,7 +56,7 @@ void Test()
   };
 
   printf("Pin_13_Value ");
-  Pin_13_Value.DebugPrint();
+  Pin_13_Value.PrintWrappings();
   printf("\n");
 }
 

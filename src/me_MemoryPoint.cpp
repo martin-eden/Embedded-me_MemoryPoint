@@ -14,7 +14,7 @@
 
     Print structure values to stdout in human-readable format.
 */
-void me_MemoryPoint::TMemoryPoint::DebugPrint()
+void me_MemoryPoint::TMemoryPoint::PrintWrappings()
 {
   printf("(Addr 0x%04X)", Addr);
 }
@@ -24,15 +24,15 @@ void me_MemoryPoint::TMemoryPoint::DebugPrint()
 
     Print structure values to stdout in human-readable format.
 */
-void me_MemoryPoint::TMemoryPoint_Bits::DebugPrint()
+void me_MemoryPoint::TMemoryPoint_Bits::PrintWrappings()
 {
   printf("(");
   printf("Base ");
-  Base.DebugPrint();
+  Base.PrintWrappings();
   printf(" BitOffs %u", BitOffs);
   printf(")");
 }
 
 /*
-  2024-05-29 DebugPrint
+  2024-05-29 PrintWrappings
 */
